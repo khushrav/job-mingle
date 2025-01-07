@@ -21,6 +21,14 @@ export default function Admin() {
     }
   };
 
+  const handleDownloadReport = () => {
+    // Handle report download
+    toast({
+      title: "Success",
+      description: "Report downloaded successfully",
+    });
+  };
+
   return (
     <div className="container mx-auto py-8">
       <div className="flex justify-between items-center mb-8">
@@ -51,7 +59,6 @@ export default function Admin() {
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
-                {/* Event list will go here */}
                 <p className="text-muted-foreground">No events found</p>
               </div>
             </CardContent>

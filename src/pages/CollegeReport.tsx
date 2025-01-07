@@ -133,25 +133,26 @@ const CollegeReport = () => {
             <CardTitle>Test Participation</CardTitle>
           </CardHeader>
           <CardContent>
-            <ChartContainer
-              className="h-[300px]"
-              config={{
-                data: "primary",
-              }}
-            >
-              <BarChart
-                data={[
-                  { name: "Aptitude", value: mockData.students.aptitude },
-                  { name: "Psychological", value: mockData.students.psychological },
-                  { name: "Coding", value: mockData.students.coding },
-                  { name: "Resumes", value: mockData.students.resumes },
-                ]}
-              >
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Bar dataKey="value" fill="var(--primary)" />
-              </BarChart>
+            <ChartContainer className="h-[300px]" config={{ data: "primary" }}>
+              <ResponsiveContainer>
+                <BarChart
+                  data={[
+                    { name: "Aptitude", value: mockData.students.aptitude },
+                    { name: "Psychological", value: mockData.students.psychological },
+                    { name: "Coding", value: mockData.students.coding },
+                    { name: "Resumes", value: mockData.students.resumes },
+                  ]}
+                >
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Tooltip />
+                  <Bar 
+                    dataKey="value" 
+                    fill="var(--primary)"
+                    label={{ position: 'top' }}
+                  />
+                </BarChart>
+              </ResponsiveContainer>
             </ChartContainer>
           </CardContent>
         </Card>
@@ -161,24 +162,25 @@ const CollegeReport = () => {
             <CardTitle>Median Scores</CardTitle>
           </CardHeader>
           <CardContent>
-            <ChartContainer
-              className="h-[300px]"
-              config={{
-                data: "primary",
-              }}
-            >
-              <BarChart
-                data={[
-                  { name: "Quant", value: mockData.medianScores.quant },
-                  { name: "Verbal", value: mockData.medianScores.verbal },
-                  { name: "Coding", value: mockData.medianScores.coding },
-                ]}
-              >
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Bar dataKey="value" fill="var(--primary)" />
-              </BarChart>
+            <ChartContainer className="h-[300px]" config={{ data: "primary" }}>
+              <ResponsiveContainer>
+                <BarChart
+                  data={[
+                    { name: "Quant", value: mockData.medianScores.quant },
+                    { name: "Verbal", value: mockData.medianScores.verbal },
+                    { name: "Coding", value: mockData.medianScores.coding },
+                  ]}
+                >
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Tooltip />
+                  <Bar 
+                    dataKey="value" 
+                    fill="var(--primary)"
+                    label={{ position: 'top' }}
+                  />
+                </BarChart>
+              </ResponsiveContainer>
             </ChartContainer>
           </CardContent>
         </Card>
