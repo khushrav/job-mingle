@@ -50,7 +50,7 @@ export const EventsSidebar = () => {
         <SidebarGroup>
           <SidebarGroupContent className="p-4 space-y-4">
             {mockEvents.map((event) => (
-              <EventCard key={event.id} event={event} />
+              <EventCard key={event.id} event={event} variant="sidebar" />
             ))}
           </SidebarGroupContent>
         </SidebarGroup>

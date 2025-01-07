@@ -8,6 +8,7 @@ import { EventsSidebar } from "@/components/events/EventsSidebar";
 import Index from "./pages/Index";
 import Events from "./pages/Events";
 import EventDetails from "./pages/EventDetails";
+import Admin from "./pages/Admin";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/events" element={<Events />} />
               <Route path="/events/:id" element={<EventDetails />} />
+              <Route path="/admin" element={<Admin />} />
             </Routes>
             <EventsSidebar />
           </div>

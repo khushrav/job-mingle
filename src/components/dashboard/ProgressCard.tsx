@@ -1,25 +1,21 @@
 import { Progress } from "@/components/ui/progress";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface ProgressCardProps {
-  completed: number;
-  total: number;
+  title: string;
+  value: number;
 }
 
-export const ProgressCard = ({ completed, total }: ProgressCardProps) => {
-  const percentage = (completed / total) * 100;
-
+export function ProgressCard({ title, value }: ProgressCardProps) {
   return (
-    <div className="bg-primary text-white p-6 rounded-lg">
-      <h2 className="text-xl font-semibold mb-2">Test Progress</h2>
-      <p className="text-primary-light mb-4">Track your journey</p>
-      <div className="space-y-2">
-        <div className="flex justify-between">
-          <span>Completed</span>
-          <span>{percentage}%</span>
-        </div>
-        <Progress value={percentage} className="bg-white/20" indicatorClassName="bg-white" />
-        <p className="text-sm">{completed} of {total} tests completed</p>
-      </div>
-    </div>
+    <Card>
+      <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+        <CardTitle className="text-sm font-medium">{title}</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="text-2xl font-bold">{value}%</div>
+        <Progress value={value} className="h-2" />
+      </CardContent>
+    </Card>
   );
-};
+}
