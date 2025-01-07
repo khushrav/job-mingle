@@ -20,8 +20,8 @@ function App() {
             <Route path="/report" element={<CollegeReport />} />
           </Routes>
           <EventsSidebar />
-        </div>
-      </Router>
+        </Router>
+      </div>
     </SidebarProvider>
   );
 }
