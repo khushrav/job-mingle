@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Upload, Download, Plus } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
+import { Link } from "react-router-dom";
 
 export default function Admin() {
   const { toast } = useToast();
@@ -20,17 +21,16 @@ export default function Admin() {
     }
   };
 
-  const handleDownloadReport = () => {
-    // Handle report download
-    toast({
-      title: "Success",
-      description: "Report downloaded successfully",
-    });
-  };
-
   return (
     <div className="container mx-auto py-8">
-      <h1 className="text-3xl font-bold mb-8">Admin Dashboard</h1>
+      <div className="flex justify-between items-center mb-8">
+        <h1 className="text-3xl font-bold">Admin Dashboard</h1>
+        <Link to="/report">
+          <Button variant="outline">
+            <Download className="mr-2 h-4 w-4" /> View College Report
+          </Button>
+        </Link>
+      </div>
       
       <Tabs defaultValue="events" className="space-y-4">
         <TabsList>
