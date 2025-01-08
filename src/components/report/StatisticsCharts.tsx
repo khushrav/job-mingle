@@ -8,6 +8,15 @@ interface StatisticsChartsProps {
 }
 
 export const StatisticsCharts = ({ participationData, scoresData }: StatisticsChartsProps) => {
+  const chartConfig = {
+    primary: {
+      color: "var(--primary)",
+    },
+    secondary: {
+      color: "var(--primary-light)",
+    },
+  };
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
       <Card>
@@ -15,7 +24,7 @@ export const StatisticsCharts = ({ participationData, scoresData }: StatisticsCh
           <CardTitle>Test Participation</CardTitle>
         </CardHeader>
         <CardContent>
-          <ChartContainer className="h-[300px]">
+          <ChartContainer className="h-[300px]" config={chartConfig}>
             <ResponsiveContainer>
               <BarChart data={participationData}>
                 <XAxis dataKey="name" />
@@ -40,7 +49,7 @@ export const StatisticsCharts = ({ participationData, scoresData }: StatisticsCh
           <CardTitle>Median Scores</CardTitle>
         </CardHeader>
         <CardContent>
-          <ChartContainer className="h-[300px]">
+          <ChartContainer className="h-[300px]" config={chartConfig}>
             <ResponsiveContainer>
               <BarChart data={scoresData}>
                 <XAxis dataKey="name" />
