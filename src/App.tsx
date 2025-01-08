@@ -21,7 +21,7 @@ function App() {
             <Route path="/report" element={<CollegeReport />} />
             <Route path="/practice" element={<Practice />} />
           </Routes>
-          {window.location.pathname !== '/report' && <EventsSidebar />}
+          {window.location.pathname !== '/report' && window.location.pathname !== '/practice' && <EventsSidebar />}
         </Router>
       </div>
     </SidebarProvider>
