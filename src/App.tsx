@@ -19,7 +19,7 @@ function App() {
             <Route path="/admin" element={<Admin />} />
             <Route path="/report" element={<CollegeReport />} />
           </Routes>
-          <EventsSidebar />
+          {window.location.pathname !== '/report' && <EventsSidebar />}
         </Router>
       </div>
     </SidebarProvider>
