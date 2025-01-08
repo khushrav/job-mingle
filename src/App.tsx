@@ -4,6 +4,7 @@ import Events from "./pages/Events";
 import EventDetails from "./pages/EventDetails";
 import Admin from "./pages/Admin";
 import CollegeReport from "./pages/CollegeReport";
+import Practice from "./pages/Practice";
 import { EventsSidebar } from "./components/events/EventsSidebar";
 import { SidebarProvider } from "./components/ui/sidebar";
 
@@ -18,6 +19,7 @@ function App() {
             <Route path="/events/:id" element={<EventDetails />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/report" element={<CollegeReport />} />
+            <Route path="/practice" element={<Practice />} />
           </Routes>
           {window.location.pathname !== '/report' && <EventsSidebar />}
         </Router>
