@@ -51,6 +51,27 @@ const Practice = () => {
                   <SelectItem value="data">Data Interpretation</SelectItem>
                 </SelectContent>
               </Select>
+              <div className="mt-4">
+                <p className="text-gray-600 mb-2">Number of Questions:</p>
+                <Select value={questionCount} onValueChange={setQuestionCount}>
+                  <SelectTrigger>
+                    <SelectValue defaultValue="10" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="10">10 Questions</SelectItem>
+                    <SelectItem value="20">20 Questions</SelectItem>
+                    <SelectItem value="30">30 Questions</SelectItem>
+                    <SelectItem value="40">40 Questions</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              <Button 
+                onClick={handleSubmit}
+                className="w-full mt-4"
+                disabled={!subject}
+              >
+                Start Practice
+              </Button>
             </CardContent>
           </Card>
 
