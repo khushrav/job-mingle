@@ -24,7 +24,7 @@ const SignIn = () => {
       
       <div className="container max-w-6xl grid gap-8 lg:grid-cols-2 relative z-10">
         {/* Left side - Benefits */}
-        <div className="text-white space-y-6">
+        <div className="text-white space-y-6 backdrop-blur-md bg-black/30 p-6 rounded-lg">
           <h1 className="text-4xl md:text-5xl font-bold">
             Unlock Your Career Potential
           </h1>
