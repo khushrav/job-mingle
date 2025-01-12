@@ -15,12 +15,12 @@ const SignIn = () => {
     <div 
       className="min-h-screen w-full flex items-center justify-center p-4 md:p-8"
       style={{
-        backgroundImage: "url('/college-campus.jpg')",
+        backgroundImage: "url('https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <div className="absolute inset-0 bg-black/50" /> {/* Slightly darker overlay for better contrast */}
+      <div className="absolute inset-0 bg-black/60" /> {/* Darkened overlay for better contrast */}
       
       <div className="container max-w-6xl grid gap-8 lg:grid-cols-2 relative z-10">
         {/* Left side - Benefits */}
