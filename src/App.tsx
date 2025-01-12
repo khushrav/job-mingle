@@ -5,6 +5,7 @@ import EventDetails from "./pages/EventDetails";
 import Admin from "./pages/Admin";
 import CollegeReport from "./pages/CollegeReport";
 import Practice from "./pages/Practice";
+import SignIn from "./pages/SignIn";
 import { EventsSidebar } from "./components/events/EventsSidebar";
 import { SidebarProvider } from "./components/ui/sidebar";
 
@@ -15,13 +16,16 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/signin" element={<SignIn />} />
             <Route path="/events" element={<Events />} />
             <Route path="/events/:id" element={<EventDetails />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/report" element={<CollegeReport />} />
             <Route path="/practice" element={<Practice />} />
           </Routes>
-          {window.location.pathname !== '/report' && window.location.pathname !== '/practice' && <EventsSidebar />}
+          {window.location.pathname !== '/report' && 
+           window.location.pathname !== '/practice' && 
+           window.location.pathname !== '/signin' && <EventsSidebar />}
         </Router>
       </div>
     </SidebarProvider>
