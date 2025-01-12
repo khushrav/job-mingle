@@ -20,7 +20,7 @@ const SignIn = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="absolute inset-0 bg-black/40" /> {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/50" /> {/* Slightly darker overlay for better contrast */}
       
       <div className="container max-w-6xl grid gap-8 lg:grid-cols-2 relative z-10">
         {/* Left side - Benefits */}
@@ -28,7 +28,7 @@ const SignIn = () => {
           <h1 className="text-4xl md:text-5xl font-bold">
             Unlock Your Career Potential
           </h1>
-          <p className="text-xl text-gray-200">
+          <p className="text-xl text-gray-100">
             Your gateway to professional success starts here
           </p>
           
@@ -37,7 +37,7 @@ const SignIn = () => {
               <GraduationCap className="w-6 h-6 mt-1 text-primary-light" />
               <div>
                 <h3 className="font-semibold text-lg">Personalized Career Guidance</h3>
-                <p className="text-gray-200">Get expert advice tailored to your goals and interests</p>
+                <p className="text-gray-100">Get expert advice tailored to your goals and interests</p>
               </div>
             </div>
             
@@ -45,7 +45,7 @@ const SignIn = () => {
               <Users className="w-6 h-6 mt-1 text-primary-light" />
               <div>
                 <h3 className="font-semibold text-lg">Industry Connections</h3>
-                <p className="text-gray-200">Connect with leading companies and professionals</p>
+                <p className="text-gray-100">Connect with leading companies and professionals</p>
               </div>
             </div>
             
@@ -53,7 +53,7 @@ const SignIn = () => {
               <BookOpen className="w-6 h-6 mt-1 text-primary-light" />
               <div>
                 <h3 className="font-semibold text-lg">Skill Development</h3>
-                <p className="text-gray-200">Access comprehensive practice tests and learning resources</p>
+                <p className="text-gray-100">Access comprehensive practice tests and learning resources</p>
               </div>
             </div>
             
@@ -61,7 +61,7 @@ const SignIn = () => {
               <Trophy className="w-6 h-6 mt-1 text-primary-light" />
               <div>
                 <h3 className="font-semibold text-lg">Track Your Progress</h3>
-                <p className="text-gray-200">Monitor your growth with detailed performance analytics</p>
+                <p className="text-gray-100">Monitor your growth with detailed performance analytics</p>
               </div>
             </div>
           </div>
@@ -69,7 +69,7 @@ const SignIn = () => {
 
         {/* Right side - Auth Card */}
         <div className="flex items-center justify-center">
-          <Card className="w-full max-w-md">
+          <Card className="w-full max-w-md bg-white/95">
             <CardHeader className="space-y-1">
               <CardTitle className="text-2xl text-center">Welcome Back</CardTitle>
               <CardDescription className="text-center">
@@ -80,7 +80,7 @@ const SignIn = () => {
               <div className="space-y-4">
                 <Button
                   onClick={handleSignIn}
-                  className="w-full"
+                  className="w-full bg-primary hover:bg-primary/90"
                 >
                   Sign In
                 </Button>
